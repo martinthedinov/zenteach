@@ -12,10 +12,6 @@ dirname = os.path.dirname(__file__)
 app = Flask(__name__)
 cors = CORS(app)
 
-# def misc_function(json_result):
-#     compressed_json_result = base64.b64encode(zlib.compress(json.dumps(json_result, ensure_ascii=False).encode('utf-8')))
-#     return compressed_json_result
-
 @app.route('/list_class')
 def list_class():
     class_data = request.args.get('class_name')
